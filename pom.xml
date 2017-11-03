@@ -1,0 +1,36 @@
+<project xmlns="http://maven.apache.org/POM/4.0.0" xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance" xsi:schemaLocation="http://maven.apache.org/POM/4.0.0 http://maven.apache.org/xsd/maven-4.0.0.xsd">
+  <modelVersion>4.0.0</modelVersion>
+  <groupId>com.github.joshelser</groupId>
+  <artifactId>hbase-wal-read</artifactId>
+  <version>0.0.1-SNAPSHOT</version>
+  <properties>
+    <hdp.suffix>2.6.2.2-5</hdp.suffix>
+    <maven.compiler.source>1.8</maven.compiler.source>
+    <maven.compiler.target>1.8</maven.compiler.target>
+  </properties>
+  <pluginRepositories>
+    <pluginRepository>
+      <id>hwx</id>
+      <url>http://repo.hortonworks.com/content/groups/public/</url>
+    </pluginRepository>
+  </pluginRepositories>
+  <repositories>
+    <repository>
+      <id>public</id>
+      <name>hwx</name>
+      <url>http://repo.hortonworks.com/content/groups/public/</url>
+    </repository>
+  </repositories>
+  <dependencies>
+    <dependency>
+      <groupId>org.apache.hadoop</groupId>
+      <artifactId>hadoop-client</artifactId>
+      <version>2.7.3.${hdp.suffix}</version>
+    </dependency>
+    <dependency>
+      <groupId>org.apache.hbase</groupId>
+      <artifactId>hbase-server</artifactId>
+      <version>1.1.2.${hdp.suffix}</version>
+    </dependency>
+  </dependencies>
+</project>
